@@ -7,29 +7,49 @@ import {
   CardTitle,
   CardText,
   CardSubtitle,
-  Button,
+  Row,
+  Col,
+  Container,
 } from "reactstrap";
 import "../App.css";
 
-
-const Game = () => {
+const Game = ({ game: { name, first_release_date, summary, rating } }) => {
   return (
     <>
-      <div>
-        <Card color="white" id="card">
-          <CardBody>
-            <CardTitle tag="h5">kskf</CardTitle>
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
-            </CardSubtitle>
-            <CardText>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </CardText>
-            <Button>Button</Button>
-          </CardBody>
-        </Card>
-      </div>
+      <Card
+        className="mb-3"
+        style={{ backgroundColor: "#182c47", color: "#fff" }}
+      >
+        <CardBody className="m-0 p-0">
+          <Row style={{ minHeight: "200px" }}>
+            <Col xs={2}>
+              <Container id="card_img" />
+            </Col>
+            <Col className="py-2">
+              <CardTitle tag="h5" style={{ color: "lightgrey" }}>
+                {name}
+              </CardTitle>
+              <CardSubtitle
+                className="mb-2"
+                style={{ fontSize: "14px", color: "silver" }}
+              >
+                Release Date:{" "}
+                {new Date().toLocaleDateString(first_release_date)}
+              </CardSubtitle>
+              <Row>
+                <Col xs={11}>
+                  <CardText className="py-1" style={{ textWrap: "wrap" }}>
+                    {summary}
+                  </CardText>
+                </Col>
+                <Col>
+                  <span id="rating">{parseInt(rating)}</span>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </CardBody>
+      </Card>
     </>
   );
 };

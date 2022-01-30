@@ -6,21 +6,98 @@ body {
   color: #c1d1e8;
 }
 
-a {
+a:link {
   text-decoration: none;
   color: #c1d1e8;
 }
 
-main {
-  min-height: 93vh;
+a:hover {
+  color: #c1d1e8;
+  text-decoration: none;
 }
 
-#searchInput, #exampleSelect, #card {
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 3333;
+}
+
+main {
+  min-height: 100vh;
+}
+
+#gameListContainer {
+
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #182c47;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5692e8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5692e8;
+}
+
+#card_img {
+  background-image: linear-gradient(to top right, deeppink , teal);
+  width: 100%;
+  min-height: 100%;
+}
+
+#rating {
+  border-radius: 50%;
+  height: 1.7rem;
+  width: 1.8rem;
+  display: flex;
+  justify-content: center;
+  background-color: #5692e8;
+  font-weight: 500;
+  color: #fff;
+}
+
+#formContainer {
+  background-color: #0e1a2b;
+  box-shadow: 0 0 5px #0e1a2b;
+  padding: 0.5rem 0.8rem 4rem 0.8rem;
+}
+
+#form {
+  /* padding: 1.5rem 1rem; */
+}
+
+#searchInput, #exampleSelect {
   background-color: #182c47;
   color: #fff;
 }
 
+#card {
+  background-color: #0e1a2b;
+}
+
+
 #clearBtn {
   background-color: #5692e8;
   color: #fff;
+}
+
+#spinner {
+  padding: 5%;
+  font-size: 2rem;
+  margin: 10px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
