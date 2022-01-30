@@ -31,7 +31,7 @@ const Game = ({ game: { name, first_release_date, summary, rating } }) => {
                 style={{ fontSize: "14px", color: "silver" }}
               >
                 Release Date:{" "}
-                {new Date().toLocaleDateString(first_release_date)}
+                {new Date(first_release_date).toLocaleDateString("en-GB")}
               </CardSubtitle>
               <Row>
                 <Col xs={11}>
