@@ -6,10 +6,9 @@ import {
   Nav,
   Collapse,
   NavbarToggler,
-  NavbarText
 } from "reactstrap";
 
-import '../App.css'
+import "../App.css";
 
 const NavBar = () => {
   return (
@@ -27,7 +26,7 @@ const NavBar = () => {
             <NavItem>
               <NavLink href="/games">Video Games</NavLink>
             </NavItem>
-            </Nav>
+          </Nav>
         </Collapse>
       </Navbar>
     </div>
